@@ -5,6 +5,7 @@ import com.saga.core.dto.commands.ReserveProductCommand;
 import com.saga.core.dto.events.ProductReservationFailedEvent;
 import com.saga.core.dto.events.ProductReservedEvent;
 import com.appsdeveloperblog.products.service.ProductService;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,21 +16,16 @@ import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 @KafkaListener(topics="${products.commands.topic.name}")
 public class ProductCommandsHandler {
 
     private final ProductService productService;
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private final KafkaTemplate<String, Object> kafkaTemplate;
-    private final String productEventsTopicName;
+    @Value("${products.events.topic.name}")
+    String productEventsTopicName;
 
-    public ProductCommandsHandler(ProductService productService,
-                                  KafkaTemplate<String, Object> kafkaTemplate,
-                                  @Value("${products.events.topic.name}") String productEventsTopicName) {
-        this.productService = productService;
-        this.kafkaTemplate = kafkaTemplate;
-        this.productEventsTopicName = productEventsTopicName;
-    }
 
     @KafkaHandler
     public void handleCommand(@Payload ReserveProductCommand command) {

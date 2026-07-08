@@ -1,0 +1,24 @@
+package com.appsdeveloperblog.products.entities;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.math.BigDecimal;
+import java.util.UUID;
+
+@Table(name = "products")
+@Setter
+@Getter
+@Entity
+public class ProductEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+    @Column(name = "quantity")
+    private Integer quantity;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "price")
+    private BigDecimal price;
+}
