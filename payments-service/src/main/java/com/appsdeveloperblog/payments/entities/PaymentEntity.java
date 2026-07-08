@@ -1,4 +1,4 @@
-package com.appsdeveloperblog.payments.dao.jpa.entity;
+package com.appsdeveloperblog.payments.entities;
 
 import jakarta.persistence.*;
 

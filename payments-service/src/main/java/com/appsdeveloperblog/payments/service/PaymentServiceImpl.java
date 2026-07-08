@@ -1,8 +1,8 @@
 package com.appsdeveloperblog.payments.service;
 
 import com.appsdeveloperblog.core.dto.Payment;
-import com.appsdeveloperblog.payments.dao.jpa.entity.PaymentEntity;
-import com.appsdeveloperblog.payments.dao.jpa.repository.PaymentRepository;
+import com.appsdeveloperblog.payments.entities.PaymentEntity;
+import com.appsdeveloperblog.payments.repos.PaymentRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
