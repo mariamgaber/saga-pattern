@@ -7,9 +7,10 @@
     <version>1.0.0</version>
     <parent>
         <groupId>com.sagaapp</groupId>
-        <artifactId>saga-pattern-spring-boot-demo</artifactId>
+        <artifactId>saga-pattern-demo</artifactId>
         <version>${revision}</version>
     </parent>
+
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
