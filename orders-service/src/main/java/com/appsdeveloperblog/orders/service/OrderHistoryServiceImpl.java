@@ -1,8 +1,8 @@
 package com.appsdeveloperblog.orders.service;
 
 import com.saga.core.types.OrderStatus;
-import com.appsdeveloperblog.orders.dao.jpa.entity.OrderHistoryEntity;
-import com.appsdeveloperblog.orders.dao.jpa.repository.OrderHistoryRepository;
+import com.appsdeveloperblog.orders.entities.OrderHistoryEntity;
+import com.appsdeveloperblog.orders.repos.OrderHistoryRepository;
 import com.appsdeveloperblog.orders.dto.OrderHistory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;

@@ -8,7 +8,6 @@
     <name>Saga Orchestration Pattern Demo</name>
     <description>Saga Orchestration Pattern Spring Boot Demo</description>
     <version>${revision}</version>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -26,7 +25,8 @@
     <properties>
         <core.version>1.0.0</core.version>
         <revision>1.0.0</revision>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
+        <lombok.version>1.18.30</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -35,6 +35,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>3.2.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.testcontainers</groupId>

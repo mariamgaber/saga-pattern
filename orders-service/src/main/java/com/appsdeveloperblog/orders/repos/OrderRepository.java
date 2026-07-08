@@ -1,6 +1,6 @@
-package com.appsdeveloperblog.orders.dao.jpa.repository;
+package com.appsdeveloperblog.orders.repos;
 
-import com.appsdeveloperblog.orders.dao.jpa.entity.OrderEntity;
+import com.appsdeveloperblog.orders.entities.OrderEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
