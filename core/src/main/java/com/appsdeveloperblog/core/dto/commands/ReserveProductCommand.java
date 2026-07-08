@@ -1,19 +1,19 @@
-package com.saga.core.dto.events;
+package com.appsdeveloperblog.core.dto.commands;
 
 import java.util.UUID;
 
-public class ProductReservationFailedEvent {
+public class ReserveProductCommand {
     private UUID productId;
-    private UUID orderId;
     private Integer productQuantity;
+    private UUID orderId;
 
-    public ProductReservationFailedEvent() {
+    public ReserveProductCommand() {
     }
 
-    public ProductReservationFailedEvent(UUID productId, UUID orderId, Integer productQuantity) {
+    public ReserveProductCommand(UUID productId, Integer productQuantity, UUID orderId) {
         this.productId = productId;
-        this.orderId = orderId;
         this.productQuantity = productQuantity;
+        this.orderId = orderId;
     }
 
     public UUID getProductId() {
@@ -24,19 +24,19 @@ public class ProductReservationFailedEvent {
         this.productId = productId;
     }
 
-    public UUID getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(UUID orderId) {
-        this.orderId = orderId;
-    }
-
     public Integer getProductQuantity() {
         return productQuantity;
     }
 
     public void setProductQuantity(Integer productQuantity) {
         this.productQuantity = productQuantity;
+    }
+
+    public UUID getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(UUID orderId) {
+        this.orderId = orderId;
     }
 }

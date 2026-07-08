@@ -1,4 +1,5 @@
-package com.appsdeveloperblog.orders.dto;
+package com.appsdeveloperblog.core.dto;
+
 
 import com.appsdeveloperblog.core.types.OrderStatus;
 import lombok.AllArgsConstructor;
@@ -9,7 +10,7 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateOrderResponse {
+public class Order {
     private UUID orderId;
     private UUID customerId;
     private UUID productId;

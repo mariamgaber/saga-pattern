@@ -1,6 +1,6 @@
 package com.appsdeveloperblog.products.controllers;
 
-import com.saga.core.dto.Product;
+import com.appsdeveloperblog.core.dto.Product;
 import com.appsdeveloperblog.products.dto.ProductCreationRequest;
 import com.appsdeveloperblog.products.dto.ProductCreationResponse;
 import com.appsdeveloperblog.products.service.ProductService;

@@ -22,7 +22,7 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sagaapp</groupId>
+            <groupId>com.appsdeveloperblog</groupId>
             <artifactId>core</artifactId>
             <version>1.0.0</version>
         </dependency>

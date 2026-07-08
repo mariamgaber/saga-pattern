@@ -1,18 +1,18 @@
-package com.saga.core.dto.events;
+package com.appsdeveloperblog.core.dto.commands;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
-public class ProductReservedEvent {
+public class ProcessPaymentCommand {
     private UUID orderId;
     private UUID productId;
     private BigDecimal productPrice;
     private Integer productQuantity;
 
-    public ProductReservedEvent() {
+    public ProcessPaymentCommand() {
     }
 
-    public ProductReservedEvent(UUID orderId, UUID productId, BigDecimal productPrice, Integer productQuantity) {
+    public ProcessPaymentCommand(UUID orderId, UUID productId, BigDecimal productPrice, Integer productQuantity) {
         this.orderId = orderId;
         this.productId = productId;
         this.productPrice = productPrice;

@@ -1,6 +1,6 @@
 package com.appsdeveloperblog.orders.dto;
 
-import com.saga.core.types.OrderStatus;
+import com.appsdeveloperblog.core.types.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

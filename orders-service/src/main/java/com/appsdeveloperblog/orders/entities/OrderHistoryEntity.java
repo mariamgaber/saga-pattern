@@ -1,6 +1,6 @@
 package com.appsdeveloperblog.orders.entities;
 
-import com.saga.core.types.OrderStatus;
+import com.appsdeveloperblog.core.types.OrderStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

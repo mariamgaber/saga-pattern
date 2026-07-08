@@ -1,17 +1,19 @@
-package com.saga.core.dto.events;
+package com.appsdeveloperblog.core.dto.events;
 
 import java.util.UUID;
 
-public class PaymentFailedEvent {
+public class OrderCreatedEvent {
     private UUID orderId;
+    private UUID customerId;
     private UUID productId;
     private Integer productQuantity;
 
-    public PaymentFailedEvent() {
+    public OrderCreatedEvent() {
     }
 
-    public PaymentFailedEvent(UUID orderId, UUID productId, Integer productQuantity) {
+    public OrderCreatedEvent(UUID orderId, UUID customerId, UUID productId, Integer productQuantity) {
         this.orderId = orderId;
+        this.customerId = customerId;
         this.productId = productId;
         this.productQuantity = productQuantity;
     }
@@ -22,6 +24,14 @@ public class PaymentFailedEvent {
 
     public void setOrderId(UUID orderId) {
         this.orderId = orderId;
+    }
+
+    public UUID getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(UUID customerId) {
+        this.customerId = customerId;
     }
 
     public UUID getProductId() {

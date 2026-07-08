@@ -1,10 +1,10 @@
 package com.appsdeveloperblog.payments.service.handler;
 
-import com.saga.core.dto.Payment;
-import com.saga.core.dto.commands.ProcessPaymentCommand;
-import com.saga.core.dto.events.PaymentFailedEvent;
-import com.saga.core.dto.events.PaymentProcessedEvent;
-import com.saga.core.exceptions.CreditCardProcessorUnavailableException;
+import com.appsdeveloperblog.core.dto.Payment;
+import com.appsdeveloperblog.core.dto.commands.ProcessPaymentCommand;
+import com.appsdeveloperblog.core.dto.events.PaymentFailedEvent;
+import com.appsdeveloperblog.core.dto.events.PaymentProcessedEvent;
+import com.appsdeveloperblog.core.exceptions.CreditCardProcessorUnavailableException;
 import com.appsdeveloperblog.payments.service.PaymentService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

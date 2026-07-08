@@ -1,9 +1,10 @@
 package com.appsdeveloperblog.orders.service;
 
-import com.saga.core.types.OrderStatus;
+import com.appsdeveloperblog.core.types.OrderStatus;
 import com.appsdeveloperblog.orders.entities.OrderHistoryEntity;
 import com.appsdeveloperblog.orders.repos.OrderHistoryRepository;
 import com.appsdeveloperblog.orders.dto.OrderHistory;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
@@ -13,12 +14,9 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class OrderHistoryServiceImpl implements OrderHistoryService {
     private final OrderHistoryRepository orderHistoryRepository;
-
-    public OrderHistoryServiceImpl(OrderHistoryRepository orderHistoryRepository) {
-        this.orderHistoryRepository = orderHistoryRepository;
-    }
 
     @Override
     public void add(UUID orderId, OrderStatus orderStatus) {

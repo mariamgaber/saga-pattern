@@ -1,7 +1,7 @@
 package com.appsdeveloperblog.payments.service;
 
-import com.saga.core.dto.CreditCardProcessRequest;
-import com.saga.core.exceptions.CreditCardProcessorUnavailableException;
+import com.appsdeveloperblog.core.dto.CreditCardProcessRequest;
+import com.appsdeveloperblog.core.exceptions.CreditCardProcessorUnavailableException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.ResourceAccessException;

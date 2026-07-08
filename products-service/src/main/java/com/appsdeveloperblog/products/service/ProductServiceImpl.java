@@ -1,7 +1,7 @@
 package com.appsdeveloperblog.products.service;
 
-import com.saga.core.dto.Product;
-import com.saga.core.exceptions.ProductInsufficientQuantityException;
+import com.appsdeveloperblog.core.dto.Product;
+import com.appsdeveloperblog.core.exceptions.ProductInsufficientQuantityException;
 import com.appsdeveloperblog.products.entities.ProductEntity;
 import com.appsdeveloperblog.products.repos.ProductRepository;
 import lombok.RequiredArgsConstructor;

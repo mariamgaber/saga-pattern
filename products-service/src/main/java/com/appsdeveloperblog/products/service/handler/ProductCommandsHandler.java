@@ -1,9 +1,9 @@
 package com.appsdeveloperblog.products.service.handler;
 
-import com.saga.core.dto.Product;
-import com.saga.core.dto.commands.ReserveProductCommand;
-import com.saga.core.dto.events.ProductReservationFailedEvent;
-import com.saga.core.dto.events.ProductReservedEvent;
+import com.appsdeveloperblog.core.dto.Product;
+import com.appsdeveloperblog.core.dto.commands.ReserveProductCommand;
+import com.appsdeveloperblog.core.dto.events.ProductReservationFailedEvent;
+import com.appsdeveloperblog.core.dto.events.ProductReservedEvent;
 import com.appsdeveloperblog.products.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

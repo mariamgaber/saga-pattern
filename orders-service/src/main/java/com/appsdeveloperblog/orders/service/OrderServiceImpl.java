@@ -1,9 +1,9 @@
 package com.appsdeveloperblog.orders.service;
 
-import com.saga.core.dto.Order;
-import com.saga.core.dto.events.OrderApprovedEvent;
-import com.saga.core.dto.events.OrderCreatedEvent;
-import com.saga.core.types.OrderStatus;
+import com.appsdeveloperblog.core.dto.Order;
+import com.appsdeveloperblog.core.dto.events.OrderApprovedEvent;
+import com.appsdeveloperblog.core.dto.events.OrderCreatedEvent;
+import com.appsdeveloperblog.core.types.OrderStatus;
 import com.appsdeveloperblog.orders.entities.OrderEntity;
 import com.appsdeveloperblog.orders.repos.OrderRepository;
 import org.springframework.beans.factory.annotation.Value;

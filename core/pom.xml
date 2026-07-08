@@ -6,11 +6,10 @@
     <artifactId>core</artifactId>
     <version>1.0.0</version>
     <parent>
-        <groupId>com.sagaapp</groupId>
-        <artifactId>saga-pattern-demo</artifactId>
+        <groupId>com.appsdeveloperblog</groupId>
+        <artifactId>saga-pattern-spring-boot-demo</artifactId>
         <version>${revision}</version>
     </parent>
-
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -19,6 +18,14 @@
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
+            <version>3.0.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <optional>true</optional>
+        </dependency>
+
     </dependencies>
 </project>

@@ -1,20 +1,21 @@
-package com.saga.core.dto.events;
+package com.appsdeveloperblog.core.dto.events;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
-public class OrderCreatedEvent {
+public class ProductReservedEvent {
     private UUID orderId;
-    private UUID customerId;
     private UUID productId;
+    private BigDecimal productPrice;
     private Integer productQuantity;
 
-    public OrderCreatedEvent() {
+    public ProductReservedEvent() {
     }
 
-    public OrderCreatedEvent(UUID orderId, UUID customerId, UUID productId, Integer productQuantity) {
+    public ProductReservedEvent(UUID orderId, UUID productId, BigDecimal productPrice, Integer productQuantity) {
         this.orderId = orderId;
-        this.customerId = customerId;
         this.productId = productId;
+        this.productPrice = productPrice;
         this.productQuantity = productQuantity;
     }
 
@@ -26,20 +27,20 @@ public class OrderCreatedEvent {
         this.orderId = orderId;
     }
 
-    public UUID getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(UUID customerId) {
-        this.customerId = customerId;
-    }
-
     public UUID getProductId() {
         return productId;
     }
 
     public void setProductId(UUID productId) {
         this.productId = productId;
+    }
+
+    public BigDecimal getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(BigDecimal productPrice) {
+        this.productPrice = productPrice;
     }
 
     public Integer getProductQuantity() {

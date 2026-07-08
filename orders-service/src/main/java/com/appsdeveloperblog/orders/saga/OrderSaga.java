@@ -1,13 +1,13 @@
 package com.appsdeveloperblog.orders.saga;
 
-import com.saga.core.dto.commands.ApproveOrderCommand;
-import com.saga.core.dto.commands.ProcessPaymentCommand;
-import com.saga.core.dto.commands.ReserveProductCommand;
-import com.saga.core.dto.events.OrderApprovedEvent;
-import com.saga.core.dto.events.OrderCreatedEvent;
-import com.saga.core.dto.events.PaymentProcessedEvent;
-import com.saga.core.dto.events.ProductReservedEvent;
-import com.saga.core.types.OrderStatus;
+import com.appsdeveloperblog.core.dto.commands.ApproveOrderCommand;
+import com.appsdeveloperblog.core.dto.commands.ProcessPaymentCommand;
+import com.appsdeveloperblog.core.dto.commands.ReserveProductCommand;
+import com.appsdeveloperblog.core.dto.events.OrderApprovedEvent;
+import com.appsdeveloperblog.core.dto.events.OrderCreatedEvent;
+import com.appsdeveloperblog.core.dto.events.PaymentProcessedEvent;
+import com.appsdeveloperblog.core.dto.events.ProductReservedEvent;
+import com.appsdeveloperblog.core.types.OrderStatus;
 import com.appsdeveloperblog.orders.service.OrderHistoryService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaHandler;

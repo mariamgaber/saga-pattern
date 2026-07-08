@@ -1,6 +1,6 @@
 package com.appsdeveloperblog.orders.controller;
 
-import com.saga.core.dto.Order;
+import com.appsdeveloperblog.core.dto.Order;
 import com.appsdeveloperblog.orders.dto.CreateOrderRequest;
 import com.appsdeveloperblog.orders.dto.CreateOrderResponse;
 import com.appsdeveloperblog.orders.dto.OrderHistoryResponse;

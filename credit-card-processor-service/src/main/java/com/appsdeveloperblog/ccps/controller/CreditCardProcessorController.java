@@ -1,6 +1,6 @@
 package com.appsdeveloperblog.ccps.controller;
 
-import com.saga.core.dto.CreditCardProcessRequest;
+import com.appsdeveloperblog.core.dto.CreditCardProcessRequest;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

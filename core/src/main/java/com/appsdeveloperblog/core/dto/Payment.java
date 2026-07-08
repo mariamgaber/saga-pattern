@@ -1,18 +1,20 @@
-package com.appsdeveloperblog.orders.dto;
+package com.appsdeveloperblog.core.dto;
 
-import com.appsdeveloperblog.core.types.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateOrderResponse {
+public class Payment {
+    private UUID id;
     private UUID orderId;
-    private UUID customerId;
     private UUID productId;
+    private BigDecimal productPrice;
     private Integer productQuantity;
-    private OrderStatus status;
-}
+
+  }
+

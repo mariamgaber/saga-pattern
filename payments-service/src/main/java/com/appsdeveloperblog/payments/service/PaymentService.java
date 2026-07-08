@@ -1,6 +1,6 @@
 package com.appsdeveloperblog.payments.service;
 
-import com.saga.core.dto.Payment;
+import com.appsdeveloperblog.core.dto.Payment;
 
 import java.util.List;
 

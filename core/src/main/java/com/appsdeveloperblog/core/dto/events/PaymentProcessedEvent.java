@@ -1,4 +1,4 @@
-package com.saga.core.dto.events;
+package com.appsdeveloperblog.core.dto.events;
 
 import java.util.UUID;
 

@@ -1,6 +1,6 @@
 package com.appsdeveloperblog.orders.service;
 
-import com.saga.core.dto.Order;
+import com.appsdeveloperblog.core.dto.Order;
 
 import java.util.UUID;
 

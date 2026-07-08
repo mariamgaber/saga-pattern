@@ -1,14 +1,14 @@
-package com.saga.core.dto.events;
+package com.appsdeveloperblog.core.dto.commands;
 
 import java.util.UUID;
 
-public class OrderApprovedEvent {
+public class ApproveOrderCommand {
     private UUID orderId;
 
-    public OrderApprovedEvent() {
+    public ApproveOrderCommand() {
     }
 
-    public OrderApprovedEvent(UUID orderId) {
+    public ApproveOrderCommand(UUID orderId) {
         this.orderId = orderId;
     }
 

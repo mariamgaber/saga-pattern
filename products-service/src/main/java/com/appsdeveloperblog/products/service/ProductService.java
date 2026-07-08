@@ -1,6 +1,6 @@
 package com.appsdeveloperblog.products.service;
 
-import com.saga.core.dto.Product;
+import com.appsdeveloperblog.core.dto.Product;
 
 import java.util.List;
 import java.util.UUID;
