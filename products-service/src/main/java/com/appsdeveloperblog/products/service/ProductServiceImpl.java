@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -54,7 +53,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> findAll() {
         return productRepository.findAll().stream()
-                .map(entity -> new Product(entity.getId(), entity.getName(), entity.getPrice(), entity.getQuantity()))
-                .collect(Collectors.toList());
+                .map(entity -> new Product(
+                        entity.getId(),
+                        entity.getName(),
+                        entity.getPrice(),
+                        entity.getQuantity()))
+                .toList();
     }
 }

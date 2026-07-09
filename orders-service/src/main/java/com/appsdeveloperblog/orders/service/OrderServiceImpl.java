@@ -6,6 +6,7 @@ import com.appsdeveloperblog.core.dto.events.OrderCreatedEvent;
 import com.appsdeveloperblog.core.types.OrderStatus;
 import com.appsdeveloperblog.orders.entities.OrderEntity;
 import com.appsdeveloperblog.orders.repos.OrderRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
@@ -14,18 +15,12 @@ import org.springframework.util.Assert;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
     private final KafkaTemplate<String, Object> kafkaTemplate;
+    @Value("${orders.events.topic.name}")
     private final String ordersEventsTopicName;
-
-    public OrderServiceImpl(OrderRepository orderRepository,
-                            KafkaTemplate<String, Object> kafkaTemplate,
-                            @Value("${orders.events.topic.name}") String ordersEventsTopicName) {
-        this.orderRepository = orderRepository;
-        this.kafkaTemplate = kafkaTemplate;
-        this.ordersEventsTopicName = ordersEventsTopicName;
-    }
 
     @Override
     public Order placeOrder(Order order) {

@@ -1,22 +1,14 @@
 package com.appsdeveloperblog.core.dto.events;
 
-import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class OrderApprovedEvent {
     private UUID orderId;
 
-    public OrderApprovedEvent() {
     }
-
-    public OrderApprovedEvent(UUID orderId) {
-        this.orderId = orderId;
-    }
-
-    public UUID getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(UUID orderId) {
-        this.orderId = orderId;
-    }
-}
