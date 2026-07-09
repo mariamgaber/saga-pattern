@@ -8,6 +8,7 @@ import com.appsdeveloperblog.core.exceptions.CreditCardProcessorUnavailableExcep
 import com.appsdeveloperblog.payments.service.PaymentService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaHandler;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -22,7 +23,8 @@ public class PaymentsCommandsHandler {
 
     private final PaymentService paymentService;
     private final KafkaTemplate<String, Object> kafkaTemplate;
-    private final String paymentEventsTopicName;
+    @Value("${payments.events.topic.name}")
+    private String paymentEventsTopicName;
     @KafkaHandler
     public void handleCommand(@Payload ProcessPaymentCommand command) {
 

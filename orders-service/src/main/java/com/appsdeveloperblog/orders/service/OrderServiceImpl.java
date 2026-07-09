@@ -7,6 +7,7 @@ import com.appsdeveloperblog.core.types.OrderStatus;
 import com.appsdeveloperblog.orders.entities.OrderEntity;
 import com.appsdeveloperblog.orders.repos.OrderRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
@@ -15,12 +16,13 @@ import org.springframework.util.Assert;
 import java.util.UUID;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
     private final KafkaTemplate<String, Object> kafkaTemplate;
     @Value("${orders.events.topic.name}")
-    private final String ordersEventsTopicName;
+    private String ordersEventsTopicName;
 
     @Override
     public Order placeOrder(Order order) {
@@ -37,6 +39,7 @@ public class OrderServiceImpl implements OrderService {
                 order.getProductId(),
                 order.getProductQuantity()
         );
+        log.info("Sending Order Created Event: {}", placedOrder);
         kafkaTemplate.send(ordersEventsTopicName, placedOrder);
 
         return new Order(
