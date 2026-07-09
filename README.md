@@ -34,3 +34,14 @@ sequenceDiagram
     OrdersService->>Kafka: OrderApprovedEvent
     Kafka->>OrderSaga: OrderApprovedEvent
 ```
+
+
+| Step | Producer         | Kafka Topic         | Consumer         |
+| ---- | ---------------- | ------------------- | ---------------- |
+| 1    | Orders Service   | `orders-events`     | OrderSaga        |
+| 2    | OrderSaga        | `products-commands` | Products Service |
+| 3    | Products Service | `products-events`   | OrderSaga        |
+| 4    | OrderSaga        | `payments-commands` | Payments Service |
+| 5    | Payments Service | `payments-events`   | OrderSaga        |
+| 6    | OrderSaga        | `orders-commands`   | Orders Service   |
+| 7    | Orders Service   | `orders-events`     | OrderSaga        |
