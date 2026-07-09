@@ -19,8 +19,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-
-// this class listens to all these topics and based on the event decides which handle method will be executed
 @KafkaListener(topics={
         "${orders.events.topic.name}",
         "${products.events.topic.name}",
